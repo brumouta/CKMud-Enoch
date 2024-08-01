@@ -1,0 +1,8 @@
+[
+  {
+    "name": "Enoch_example_script",
+    "eventHandlerList": [
+      "sysInstall"
+    ]
+  }
+]
