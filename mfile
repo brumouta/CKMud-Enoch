@@ -1,7 +1,9 @@
 {
-  "package": "Enoch",
-  "version": "1.4.0",
-  "author": "fried",
-  "title": "Enoch by fried",
-  "outputFile": true
+       "package": "CKMud-Enoch",
+       "title": "Automation Scripts for Enoch and other Organics",
+       "version": "0.4.0",
+       "author": "fried",
+       "icon": "dabura.png",
+       "dependencies": "ENCOChat",
+       "outputFile": true
 }

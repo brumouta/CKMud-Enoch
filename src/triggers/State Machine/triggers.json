@@ -1,0 +1,146 @@
+[
+       {
+              "name": "Crafting State Enter",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multielineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You begin to break rocks into smaller rocks with your pickaxe",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You start crafting a new scouter.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You start crafting a new",
+                            "type": "startOfLine"
+                     },
+                     {
+                            "pattern": "You sit down and start fabricating a bag.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You start chopping away at a nearby tree.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You begin to collect sand with your sand collector.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You begin to flay the corpse with your weapon.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Crafting State Exit",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multielineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "After hours of mining... you have found nothing...",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You are interrupted and fail to find any ore.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "After hours of mining you have found a lump of iron!",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You have crafted a new",
+                            "type": "startOfLine"
+                     },
+                     {
+                            "pattern": "After hours of mining you have found",
+                            "type": "startOfLine"
+                     },
+                     {
+                            "pattern": "Your new .+ falls apart in your hands...",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "After alot of chopping you learn the tree is rotten and useless...",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You chop (.+) off the nearby tree!",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "After hours of collecting you have found (.+)!",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "After flaying the corpse, you peel off (.+)!",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "Your clumsy attempt to flay the corpse has ended in utter failure...",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Wake remove rest state",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multielineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You awaken, and stand up.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Sleep set rest",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multielineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You lie down and drift into slumber.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       }
+]

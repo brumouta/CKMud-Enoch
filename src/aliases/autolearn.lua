@@ -1,0 +1,1 @@
+toggle_learningmode(matches[2])

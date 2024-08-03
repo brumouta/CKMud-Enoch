@@ -1,0 +1,1 @@
+Counters.timer_trainer = 3
