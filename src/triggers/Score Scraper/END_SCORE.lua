@@ -4,6 +4,10 @@ local function item_tier()
   -- Thanks Vorrac
   local base_pl = Player.BASEPL
   local tier = 0
+  if base_pl >= 3000000000 then
+    tier = 8
+  if base_pl >= 1500000000 then
+    tier = 7
   if base_pl >= 500000000 then
     tier = 6
   elseif base_pl >= 250000000 then
