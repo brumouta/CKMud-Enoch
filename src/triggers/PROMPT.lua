@@ -1,3 +1,6 @@
+-- Gating the regex with a substring
+local matches = multimatches[2]
+
 -- [Pl: 1,090,158 | Ki: 100% | Fatigue: 0%][FLY]
 Times.lastprompt = getEpoch()
 Toggles.firstprompt = true

@@ -87,7 +87,7 @@
               "name": "PROMPT",
               "isActive": "yes",
               "isFolder": "no",
-              "multiline": "no",
+              "multiline": "yes",
               "multielineDelta": "0",
               "matchall": "no",
               "filter": "no",
@@ -96,6 +96,10 @@
               "highlightFG": "#ff0000",
               "highlightBG": "#ffff00",
               "patterns": [
+                     {
+                            "pattern": "| Fatigue:",
+                            "type": "substring"
+                     },
                      {
                             "pattern": "^\\[Pl: (?\u003cPL\u003e[0-9,]+) \\| Ki: (?\u003cKI\u003e\\d+)% \\| Fatigue: (?\u003cFATIGUE\u003e\\d+)%](?\u003cHT\u003e \\[HT])?(?\u003cFLYING\u003e\\[FLY])?",
                             "type": "regex"
