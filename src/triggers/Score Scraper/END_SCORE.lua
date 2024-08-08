@@ -30,7 +30,7 @@ if PromptFlags.scorecard then
   Player.PHY_DAM = phy_dam()
   echoc(
     string.format(
-      '<dim_gray>PHY DAM<white>:         <yellow>%-18s<dim_gray>KI DAM<white>: <yellow>%s\n',
+      '<dim_gray>PHY DAM<white>:         <yellow>%-18s<dim_gray>KI DAM<white>:    <yellow>%s\n',
       reformatInt(Player.PHY_DAM),
       reformatInt(Player.KI_DAM)
     )

@@ -8,16 +8,16 @@ local function dam(stat1, stat2, supreme, boosted)
   local boost_multi = (boosted or supreme) and 750 or 500
   return
     math.floor(
-      (stat1 * supreme_multi) +
-      (stat2 * supreme_multi) +
+      ((stat1 * 1.8) * supreme_multi) +
+      ((stat2 / 5) * supreme_multi) +
       (Player.DAMROLL * boost_multi) +
       (Player.HITROLL * boost_multi) +
-      (Player.MAXPL / 100)
+      (math.min((Player.MAXPL / 200), 2000000))
     )
 end
 
 function HEAL_FACTOR()
-  return Player.Stats.INT * 15000 + Player.Stats.WIS * 15000 + Player.MAXPL / 100
+  return Player.Stats.INT * 5000 + Player.Stats.WIS * 25000 + Player.MAXPL / 100
 end
 
 function ki_dam(supreme, boosted)
