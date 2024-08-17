@@ -51,7 +51,7 @@
               "name": "PROMPT",
               "isActive": "yes",
               "isFolder": "no",
-              "multiline": "no",
+              "multiline": "yes",
               "multilineDelta": "0",
               "matchall": "no",
               "filter": "no",
