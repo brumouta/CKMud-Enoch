@@ -10,7 +10,7 @@ From Time to time the script will issue `score`, and use scouter on yourself to 
 
 ## Installation
 
-`installPackage("https://github.com/CKMud-Mudlet-Scripts/Enoch/releases/latest/download/CKMud-Enoch.mpackage")`
+`lua installPackage("https://github.com/CKMud-Mudlet-Scripts/Enoch/releases/latest/download/CKMud-Enoch.mpackage")`
 
 After installation `enoch update` alias will take care of updating the script. 
 
