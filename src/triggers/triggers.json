@@ -1,46 +1,10 @@
 [
        {
-              "name": "Are We Fighting",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multielineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "\\[Enemy: (?\u003cEnemy\u003e.+)] \\[([0-9,]+)]",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "\\*\\*\\*([0-9,]+)\\*\\*\\*",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "\\[Enemy: (\\d+)%?]",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "No way!  You're fighting for your life!",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "\\[Combo: (.+)]",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
               "name": "End of Fight by RIP",
               "isActive": "yes",
               "isFolder": "no",
               "multiline": "no",
-              "multielineDelta": "0",
+              "multilineDelta": "0",
               "matchall": "no",
               "filter": "no",
               "fireLength": "0",
@@ -60,7 +24,7 @@
               "isActive": "yes",
               "isFolder": "no",
               "multiline": "no",
-              "multielineDelta": "0",
+              "multilineDelta": "0",
               "matchall": "no",
               "filter": "no",
               "fireLength": "0",
@@ -87,8 +51,8 @@
               "name": "PROMPT",
               "isActive": "yes",
               "isFolder": "no",
-              "multiline": "yes",
-              "multielineDelta": "0",
+              "multiline": "no",
+              "multilineDelta": "0",
               "matchall": "no",
               "filter": "no",
               "fireLength": "0",
@@ -101,7 +65,7 @@
                             "type": "substring"
                      },
                      {
-                            "pattern": "^\\[Pl: (?\u003cPL\u003e[0-9,]+) \\| Ki: (?\u003cKI\u003e\\d+)% \\| Fatigue: (?\u003cFATIGUE\u003e\\d+)%](?\u003cHT\u003e \\[HT])?(?\u003cFLYING\u003e\\[FLY])?",
+                            "pattern": "^\\[Pl: (?\u003cPL\u003e[0-9,]+) \\| Ki: (?\u003cKI\u003e\\d+)% (?:\\| GK: (?\u003cGK\u003e\\d+)% )?\\| Fatigue: (?\u003cFATIGUE\u003e\\d+)%](?\u003cHT\u003e \\[HT])?(?\u003cFLYING\u003e\\[FLY])?",
                             "type": "regex"
                      }
               ],
@@ -112,7 +76,7 @@
               "isActive": "yes",
               "isFolder": "no",
               "multiline": "no",
-              "multielineDelta": "0",
+              "multilineDelta": "0",
               "matchall": "no",
               "filter": "no",
               "fireLength": "0",
@@ -140,7 +104,7 @@
               "isActive": "yes",
               "isFolder": "no",
               "multiline": "no",
-              "multielineDelta": "0",
+              "multilineDelta": "0",
               "matchall": "no",
               "filter": "no",
               "fireLength": "0",
@@ -160,7 +124,7 @@
               "isActive": "yes",
               "isFolder": "no",
               "multiline": "no",
-              "multielineDelta": "0",
+              "multilineDelta": "0",
               "matchall": "no",
               "filter": "no",
               "fireLength": "0",
@@ -184,7 +148,7 @@
               "isActive": "yes",
               "isFolder": "no",
               "multiline": "no",
-              "multielineDelta": "0",
+              "multilineDelta": "0",
               "matchall": "no",
               "filter": "no",
               "fireLength": "0",
@@ -220,7 +184,7 @@
               "isActive": "yes",
               "isFolder": "no",
               "multiline": "no",
-              "multielineDelta": "0",
+              "multilineDelta": "0",
               "matchall": "no",
               "filter": "no",
               "fireLength": "0",
@@ -240,7 +204,7 @@
               "isActive": "yes",
               "isFolder": "no",
               "multiline": "no",
-              "multielineDelta": "0",
+              "multilineDelta": "0",
               "matchall": "no",
               "filter": "no",
               "fireLength": "0",
@@ -260,7 +224,7 @@
               "isActive": "yes",
               "isFolder": "no",
               "multiline": "no",
-              "multielineDelta": "0",
+              "multilineDelta": "0",
               "matchall": "no",
               "filter": "no",
               "fireLength": "0",
@@ -280,7 +244,7 @@
               "isActive": "yes",
               "isFolder": "no",
               "multiline": "no",
-              "multielineDelta": "0",
+              "multilineDelta": "0",
               "matchall": "no",
               "filter": "no",
               "fireLength": "0",
@@ -300,7 +264,7 @@
               "isActive": "yes",
               "isFolder": "no",
               "multiline": "no",
-              "multielineDelta": "0",
+              "multilineDelta": "0",
               "matchall": "no",
               "filter": "no",
               "fireLength": "0",
@@ -320,7 +284,7 @@
               "isActive": "yes",
               "isFolder": "no",
               "multiline": "no",
-              "multielineDelta": "0",
+              "multilineDelta": "0",
               "matchall": "no",
               "filter": "no",
               "fireLength": "0",
@@ -340,7 +304,7 @@
               "isActive": "yes",
               "isFolder": "no",
               "multiline": "no",
-              "multielineDelta": "0",
+              "multilineDelta": "0",
               "matchall": "no",
               "filter": "no",
               "fireLength": "0",
@@ -360,7 +324,7 @@
               "isActive": "yes",
               "isFolder": "no",
               "multiline": "no",
-              "multielineDelta": "0",
+              "multilineDelta": "0",
               "matchall": "no",
               "filter": "no",
               "fireLength": "0",
@@ -380,7 +344,7 @@
               "isActive": "yes",
               "isFolder": "no",
               "multiline": "no",
-              "multielineDelta": "0",
+              "multilineDelta": "0",
               "matchall": "no",
               "filter": "no",
               "fireLength": "0",
@@ -404,7 +368,7 @@
               "isActive": "yes",
               "isFolder": "no",
               "multiline": "no",
-              "multielineDelta": "0",
+              "multilineDelta": "0",
               "matchall": "no",
               "filter": "no",
               "fireLength": "0",
@@ -428,7 +392,7 @@
               "isActive": "yes",
               "isFolder": "no",
               "multiline": "no",
-              "multielineDelta": "0",
+              "multilineDelta": "0",
               "matchall": "no",
               "filter": "no",
               "fireLength": "0",
@@ -452,7 +416,7 @@
               "isActive": "yes",
               "isFolder": "no",
               "multiline": "no",
-              "multielineDelta": "0",
+              "multilineDelta": "0",
               "matchall": "no",
               "filter": "no",
               "fireLength": "0",
@@ -467,6 +431,10 @@
                      {
                             "pattern": "Welcome to the Gauntlet",
                             "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "The Gauntlet - Reception",
+                            "type": "exactMatch"
                      }
               ],
               "script": ""
@@ -476,7 +444,7 @@
               "isActive": "yes",
               "isFolder": "no",
               "multiline": "no",
-              "multielineDelta": "0",
+              "multilineDelta": "0",
               "matchall": "no",
               "filter": "no",
               "fireLength": "0",
@@ -486,6 +454,184 @@
               "patterns": [
                      {
                             "pattern": "^(\\w+) tells you, '(.+)'$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Remort Level Scrape",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "2",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "Remort Information:",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "o------------------------------------------------------------o",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "^ Level:\\s*([0-9]+)$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Learn Scrap XL",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "1",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "99",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "o---------------------------------------------------------o",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "Technique           Req.       Technique           Req. ",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "",
+              "children": [
+                     {
+                            "name": "scrape skill",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "yes",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "([^ ][a-z ]+?)\\s+(Mastered|Supreme|Boosted|[0-9]+%)",
+                                          "type": "regex"
+                                   }
+                            ],
+                            "script": ""
+                     },
+                     {
+                            "name": "Skill Sections",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "^(Physical) Attacks:",
+                                          "type": "regex"
+                                   },
+                                   {
+                                          "pattern": "^(Ki) Attacks:",
+                                          "type": "regex"
+                                   },
+                                   {
+                                          "pattern": "^(AoE) Attacks:",
+                                          "type": "regex"
+                                   },
+                                   {
+                                          "pattern": "^(Other) Skills:",
+                                          "type": "regex"
+                                   },
+                                   {
+                                          "pattern": "^o---------------------[ (Focus) Skills ]--------------------o$",
+                                          "type": "regex"
+                                   }
+                            ],
+                            "script": ""
+                     },
+                     {
+                            "name": "close Learn scrape",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": " Use 'slist' to show all skills available to your race",
+                                          "type": "exactMatch"
+                                   }
+                            ],
+                            "script": ""
+                     }
+              ]
+       },
+       {
+              "name": "Auto Unravel Gauntlet",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "A door opens and",
+                            "type": "startOfLine"
+                     },
+                     {
+                            "pattern": "^A door opens and (\\w+).* walks in.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Auto Unravel Rival",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "flies out of nowhere and attacks you!",
+                            "type": "substring"
+                     },
+                     {
+                            "pattern": "^(\\w+).* flies out of nowhere and attacks you!$",
                             "type": "regex"
                      }
               ],

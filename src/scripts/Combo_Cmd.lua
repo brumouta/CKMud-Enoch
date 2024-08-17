@@ -34,7 +34,7 @@ function next_combo(combo_test)
     --display(head)
     local next_attack = random_elem(head)
     --display(next_attack)
-    return string.gsub(next_attack, " ", "")
+    return translate_skill_name(next_attack)
   end
 end
 

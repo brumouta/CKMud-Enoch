@@ -26,13 +26,13 @@ function onNotFightingPrompt()
       true
     )
     speedwalk(sleepwalk_target, false, 0.5)
-
+    
   end
   -- Botmode Auto Wake
-  if Toggles.wakeok and Toggles.learning and is_state(State.REST) and (Player.KI >= 100 and Player.FATIGUE <= 0) then
+  if Toggles.wakeok and Toggles.learning and is_state(State.REST) and (Player.KI >= 100 and Player.FATIGUE <= 0 and Player.GK >= 100) then
     send("wake")
     Toggles.wakeok = false
-
+    
     registerAnonymousEventHandler(
       "sysSpeedwalkFinished",
       function()

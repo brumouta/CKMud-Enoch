@@ -36,6 +36,7 @@ fullname_to_cmd =
     ["void wave"] = "void",
     ["evil blast"] = "evilblast",
     ["ethereal blade"] = "ethereal",
+    ["galick gun"] = "galick",
   }
 
 function toggle_learningmode(target)
@@ -123,6 +124,8 @@ function do_learn()
       },
       true
     )
+  local gk_skills = skill_filter({"hakai barrier", "celestial shield", "divine heal"}, true)
+  local ultra = skill_filter({"ultra instinct", "ultra ego"}, true)
 
   local function get_learn_triggers(type)
     local new_dict
@@ -138,10 +141,7 @@ function do_learn()
         new_dict["finalk"] = {"warp", "final"}
       end
     else
-      new_dict = {
-        ["machkick"] = {"kick"},
-        ["machpunch"] = {"punch"},
-      }
+      new_dict = {["machkick"] = {"kick"}, ["machpunch"] = {"punch"}}
       if Player.BASEPL > 125000000 then
         new_dict["justice"] = {"cyclone", "dynamite", "rage"}
         new_dict["supergodfist"] = {"godfist", "wolf", "dpunch"}
@@ -172,36 +172,40 @@ function do_learn()
     ---fight("name")
     if Toggles.timer_ok then
       --(Player.FATIGUE <= 90 and Player.KI > 20) then
-      if melee_ok and #starting_melee > 0 then
-        Toggles.timer_ok = false
-        PromptCounters.timer_ok = 20
-        fsend{starting_melee[1], autolearn_target}
+      if #gk_skills > 0 and Player.GK > 12 then
+        focus_buff(gk_skills[1])
+      elseif #ultra > 0 and Player.GK > 51 then
+        focus_buff(ultra[1])
       elseif ki_ok and #starting_ki > 0 then
         Toggles.timer_ok = false
         PromptCounters.timer_ok = 20
-        fsend{starting_ki[1], autolearn_target}
-      elseif melee_ok and #learned_melee_skills > 0 then
-        Toggles.timer_ok = false
-        PromptCounters.timer_ok = 20
-        fsend{learned_melee_skills[1], autolearn_target}
+        fsend({starting_ki[1], autolearn_target})
       elseif ki_ok and #learned_ki_skills > 0 then
         Toggles.timer_ok = false
         PromptCounters.timer_ok = 20
-        fsend{learned_ki_skills[1], autolearn_target}
+        fsend({learned_ki_skills[1], autolearn_target})
+      elseif melee_ok and #starting_melee > 0 then
+        Toggles.timer_ok = false
+        PromptCounters.timer_ok = 20
+        fsend({starting_melee[1], autolearn_target})
+      elseif melee_ok and #learned_melee_skills > 0 then
+        Toggles.timer_ok = false
+        PromptCounters.timer_ok = 20
+        fsend({learned_melee_skills[1], autolearn_target})
       elseif melee_ok and #new_other > 0 then
         Toggles.timer_ok = true
-        fsend{new_other[1], autolearn_target}
+        fsend({new_other[1], autolearn_target})
       elseif ki_ok and #new_targeted_focus > 0 then
         Toggles.timer_ok = true
-        fsend{new_targeted_focus[1], autolearn_target}
+        fsend({new_targeted_focus[1], autolearn_target})
       elseif #new_learnable_ki > 0 and ki_ok then
         Toggles.timer_ok = false
         PromptCounters.timer_ok = 20
-        fsend{new_learnable_ki[1], autolearn_target}
+        fsend({new_learnable_ki[1], autolearn_target})
       elseif #new_learnable_melee > 0 and melee_ok then
         Toggles.timer_ok = false
         PromptCounters.timer_ok = 20
-        fsend{new_learnable_melee[1], autolearn_target}
+        fsend({new_learnable_melee[1], autolearn_target})
       elseif #new_buffs > 0 and ki_ok then
         Toggles.timer_ok = true
         PromptCounters.timer_ok = 20
@@ -214,10 +218,10 @@ function do_learn()
         Toggles.timer_ok = false
         PromptCounters.time_ok = 20
         send("whirl")
-      elseif #new_goku_target > 0 and ki_ok then
+      elseif #new_goku_target > 0 and ki_ok and Player.GK == 100 then
         Toggles.timer_ok = true
-        fsend{random_list_elem(new_goku_target), random_list_elem(target)}
-      elseif melee_ok and Player.Mastered["sup"] == nil then
+        fsend({random_list_elem(new_goku_target), random_list_elem(target)})
+      elseif melee_ok and Player.Learned["sup"] and Player.Mastered["sup"] == nil then
         local alist = skill_filter({"sup"})
         if #alist > 0 then
           send("sup 10")
@@ -233,10 +237,14 @@ function do_learn()
       then
         send("powerdown")
         send("powerup")
-      elseif melee_ok and #UBSLBSSKILLS > 0 then
-        local lfight = random_list_elem(UBSLBSSKILLS)
-        fsend{lfight, autolearn_target}
-      elseif not melee_ok or not ki_ok then
+      elseif everything_mastered() and melee_ok and #UBSLBSSKILLS > 0 and Player.GK == 100 then
+        -- We should check that there a no skills unmastered
+        local lfight = UBSLBSSKILLS[1]
+        if Player.UBS < 100 and Player.LBS < 100 and Player.LBS < Player.UBS then
+          local lfight = UBSLBSSKILLS[2]
+        end
+        fsend({lfight, autolearn_target})
+      elseif not melee_ok or not ki_ok or Player.GK < 51 then
         Toggles.go_rest = true
       end
     end
@@ -250,6 +258,23 @@ function translate_skill_name(raw)
     return cmd_name
   end
   return lraw
+end
+
+local ignored_skills =
+  {"block", "hyper movement", "sense", "rescue", "repair", "deflect", "absorb", "dodge"}
+
+function everything_mastered()
+  for k, v in pairs(Player.Learned) do
+    if
+      not string.starts(k, "make") and
+      not table.contains(ignored_skills, k) and
+      Player.Mastered[k] == nil
+    then
+      cecho(f("<red>{k} is not mastered"))
+      return false
+    end
+  end
+  return true
 end
 
 function filter_learn_triggers(adict)

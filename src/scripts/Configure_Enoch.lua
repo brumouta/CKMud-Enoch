@@ -1,4 +1,4 @@
-local fried = require("CKMud-Enoch.fried")
+local fried = require("__PKGNAME__.fried")
 
 -- Initalize the used Tables
 registerAnonymousEventHandler(

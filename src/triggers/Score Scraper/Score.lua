@@ -1,3 +1,6 @@
+local matches = multimatches[2]
+Player.Name = matches[2]
+
 PromptFlags.scorecard = true
 Times.lastscore = getEpoch()
 

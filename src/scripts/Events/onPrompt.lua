@@ -55,5 +55,5 @@ end
 
 function iThinkWeFighting()
   -- If we have two prompts with not fight messages its safe to say fighting is over
-  PromptCounters.fighting = 2
+  PromptCounters.fighting = 3
 end

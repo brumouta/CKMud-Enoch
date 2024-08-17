@@ -3,7 +3,7 @@
               "name": "Score",
               "isActive": "yes",
               "isFolder": "no",
-              "multiline": "no",
+              "multiline": "yes",
               "multielineDelta": "0",
               "matchall": "no",
               "filter": "no",
@@ -15,6 +15,10 @@
                      {
                             "pattern": "Score Information for:",
                             "type": "startOfLine"
+                     },
+                     {
+                            "pattern": "^Score Information for:(\\w+)",
+                            "type": "regex"
                      }
               ],
               "script": ""

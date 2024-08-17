@@ -1,0 +1,82 @@
+[
+       {
+              "name": "Are We Fighting",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "\\[Enemy: (?\u003cEnemy\u003e.+)] \\[([0-9,]+)]",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "\\[Enemy: (\\d+)%?]",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "No way!  You're fighting for your life!",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "\\*\\*\\*([0-9,]+)\\*\\*\\*",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "battlespam mode",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": " times. [",
+                            "type": "substring"
+                     },
+                     {
+                            "pattern": "^\\[(.+?)] hits (.+?) [0-9]+ times. [[0-9,]+]$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Boss Health",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "%]",
+                            "type": "substring"
+                     },
+                     {
+                            "pattern": "^\\[[^:]+: [0-9]+%]$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

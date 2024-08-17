@@ -6,6 +6,8 @@ Times.lastprompt = getEpoch()
 Toggles.firstprompt = true
 -- Extract Info from Prompt
 Player.KI = tonumber(matches.KI)
+Player.GK = tonumber(matches.GK or 100)
+Player.MAXGK = 500 + 50 * (Player.RemortLevel or 0)
 Player.FATIGUE = tonumber(matches.FATIGUE)
 Player.PL = tonumber(string.trim(string.gsub(matches.PL, ",", "")))
 Player.HT = matches.HT == " [HT]"
