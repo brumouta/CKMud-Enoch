@@ -53,7 +53,7 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "\\s*(?\u003caffect\u003e.+)\\s*: In affect for (?\u003ctime\u003e\\d+) mins\\.$",
+                            "pattern": "\\s*(?\u003caffect\u003e.+)\\s*: In affect for (?\u003ctime\u003e\\d+) minutes\\.$",
                             "type": "regex"
                      }
               ],
